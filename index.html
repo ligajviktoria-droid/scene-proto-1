@@ -4,23 +4,25 @@
 <meta charset="utf-8" />
 <meta name="robots" content="noindex,nofollow,noarchive" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Э1 «График работы» — постановка</title>
+<title>Э1 «График работы» — визуальная сцена</title>
 <style>
-  html,body{margin:0;background:#0b0d12;color:#e9e7e2;font:16px/1.6 ui-serif,Georgia,serif}
-  #boot{max-width:640px;margin:18vh auto;padding:0 22px;color:#8b93a1}
+  html,body{margin:0;background:#080a0e;color:#ece9e3;font:16px/1.6 ui-serif,Georgia,serif}
+  #boot{max-width:640px;margin:18vh auto;padding:0 22px;color:#9aa3b2}
   #boot b{color:#c9a227}
   .err{border:1px solid #7a3b3b;border-radius:8px;padding:14px;color:#e3b9b9;margin-top:16px;word-break:break-all}
 </style>
 </head>
 <body>
 <div id="boot">
-  <p><b>Загрузка постановки…</b></p>
-  <p>Э1 «ГРАФИК РАБОТЫ» · сценарий v21</p>
+  <p><b>Загрузка сцены…</b></p>
+  <p>Э1 «ГРАФИК РАБОТЫ» · сценарий v21 · утверждённые локации</p>
   <div id="err"></div>
 </div>
 <script>
 (function () {
-  var SRC = 'https://d2ol7oe51mr4n9.cloudfront.net/user_34YAuil8DLxoJBcWgRRVi8tVqfV/9b45d700-bca4-4073-89bb-4e622768b220.html';
+  var DEFAULT_SRC = 'https://d2ol7oe51mr4n9.cloudfront.net/user_34YAuil8DLxoJBcWgRRVi8tVqfV/e0faa2ce-9fbb-4e37-a922-fc4ffad14a5e.html';
+  var m = /(?:^|[#&])u=([^&]+)/.exec(location.hash || '');
+  var SRC = m ? decodeURIComponent(m[1]) : DEFAULT_SRC;
   function fail(msg) {
     var d = document.getElementById('err');
     d.className = 'err';
@@ -35,7 +37,7 @@
       document.write(html);
       document.close();
     })
-    .catch(function (e) { fail('Не удалось загрузить постановку: ' + e.message + '.'); });
+    .catch(function (e) { fail('Не удалось загрузить сцену: ' + e.message + '.'); });
 })();
 </script>
 </body>
